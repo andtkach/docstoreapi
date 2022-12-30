@@ -14,11 +14,11 @@ services:
     ports:
       - 5432:5432
 
-  #webapi:
-  #  image: ${DOCKER_REGISTRY-}webapi
-  #  container_name: WebApi
-  #  build:
-  #    context: .
-  #    dockerfile: src/WebApi/Dockerfile
-  #  depends_on:
-  #    - postgres-db
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    container_name: WebApi
+    build:
+      context: .
+      dockerfile: src/WebApi/Dockerfile
+    depends_on:
+      - postgres-db
