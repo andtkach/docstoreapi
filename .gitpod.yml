@@ -7,6 +7,8 @@ tasks:
       dotnet dev-certs https 
       dotnet restore backend/DocStore.sln 
       dotnet build backend/DocStore.sln
+  - name: Docker
+    command: docker-compose -f backend/docker-compose-db.yml up
   - name: Run
     command: dotnet run --project backend/src/WebApi/WebApi.csproj
 
@@ -21,4 +23,7 @@ ports:
     description: Web API
 
   - port: 5001
+    onOpen: "ignore"
+
+  - port: 5000
     onOpen: "ignore"
