@@ -2,13 +2,18 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: Restore & Build
+
+  - name: Restore
     init: |
       dotnet dev-certs https 
-      dotnet restore backend/DocStore.sln 
-      dotnet build backend/DocStore.sln
+      dotnet restore backend/DocStore.sln
+
+  - name: Build
+    init: dotnet build backend/DocStore.sln
+
   - name: Docker
     command: docker-compose -f backend/docker-compose-db.yml up
+
   - name: Run
     command: dotnet run --project backend/src/WebApi/WebApi.csproj
 
@@ -17,8 +22,9 @@ vscode:
     - muhammad-sammy.csharp
 
 ports:
+
   - port: 5002
-    onOpen: "open-browser"
+    onOpen: "ignore"
     name: ssl port
     description: Web API
 
@@ -26,4 +32,9 @@ ports:
     onOpen: "ignore"
 
   - port: 5000
+    onOpen: "ignore"
+
+  - port: 5432
+    name: db port
+    description: Pstrgres
     onOpen: "ignore"
