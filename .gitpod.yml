@@ -4,19 +4,15 @@ image:
 tasks:
 
   - name: Restore
-    init: |
+    before: |
       dotnet dev-certs https 
-      dotnet restore backend/DocStore.sln
-
-  - name: Build
+      dotnet restore backend/DocStore.sln  
     init: dotnet build backend/DocStore.sln
+    command: dotnet run --project backend/src/WebApi/WebApi.csproj
 
   - name: Docker
     command: docker-compose -f backend/docker-compose-db.yml up
-
-  - name: Run
-    command: dotnet run --project backend/src/WebApi/WebApi.csproj
-
+      
 vscode:
   extensions:
     - muhammad-sammy.csharp
