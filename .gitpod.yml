@@ -35,6 +35,7 @@ ports:
     onOpen: "ignore"
     name: api debug 
     description: Web API Debug 
+    visibility: public
 
   - port: 5432
     name: db

@@ -1,4 +1,4 @@
-@hostname = https://5000-andtkach-docstoreapi-g5kd4n7py75.ws-eu80.gitpod.io
+@hostname = https://5000-andtkach-docstoreapi-kpwki1d1imq.ws-eu80.gitpod.io
 
 GET {{hostname}}/swagger HTTP/1.1
 
