@@ -20,7 +20,6 @@ vscode:
     - humao.rest-client
     - ms-azuretools.vscode-docker
     - ckolkman.vscode-postgres
-    - eamodio.gitlens
     - rangav.vscode-thunder-client
     - vscode-icons-team.vscode-icons
     - patcx.vscode-nuget-gallery
