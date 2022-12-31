@@ -1,4 +1,4 @@
-@hostname = https://5000-andtkach-docstoreapi-kpwki1d1imq.ws-eu80.gitpod.io
+@hostname = https://5000-andtkach-docstoreapi-4e0tovz3wnm.ws-eu80.gitpod.io
 
 GET {{hostname}}/swagger HTTP/1.1
 
@@ -29,6 +29,7 @@ PUT {{hostname}}/products/1 HTTP/1.1
 content-type: application/json
 
 {
+    "id": 1,
     "name": "Product 1 Updated",
     "price": 101,
     "tags": [
