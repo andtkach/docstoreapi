@@ -19,6 +19,8 @@ vscode:
     - sdras.night-owl
     - humao.rest-client
     - ms-azuretools.vscode-docker
+    - ckolkman.vscode-postgres
+    
 ports:
 
   - port: 5002
