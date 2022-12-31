@@ -1,0 +1,41 @@
+@hostname = https://5000-andtkach-docstoreapi-g5kd4n7py75.ws-eu80.gitpod.io
+
+GET {{hostname}}/swagger HTTP/1.1
+
+###
+
+GET {{hostname}}/products HTTP/1.1
+
+###
+
+GET {{hostname}}/products/1 HTTP/1.1
+
+###
+
+POST {{hostname}}/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Product 1",
+    "price": 100,
+    "tags": [
+        "tag1", "tag2" 
+    ]
+}
+
+###
+
+PUT {{hostname}}/products/1 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Product 1 Updated",
+    "price": 101,
+    "tags": [
+        "tag1", "tag2", "updated tag"
+    ]
+}
+
+###
+
+DELETE {{hostname}}/products/1 HTTP/1.1

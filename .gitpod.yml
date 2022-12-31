@@ -17,7 +17,8 @@ vscode:
   extensions:
     - muhammad-sammy.csharp
     - sdras.night-owl
-
+    - humao.rest-client
+    - ms-azuretools.vscode-docker
 ports:
 
   - port: 5002
@@ -30,8 +31,10 @@ ports:
 
   - port: 5000
     onOpen: "ignore"
+    name: api debug 
+    description: Web API Debug 
 
   - port: 5432
-    name: db port
+    name: db
     description: Pstrgres
     onOpen: "ignore"
