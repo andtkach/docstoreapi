@@ -16,6 +16,7 @@ tasks:
 vscode:
   extensions:
     - muhammad-sammy.csharp
+    - sdras.night-owl
 
 ports:
 
