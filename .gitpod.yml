@@ -16,7 +16,7 @@ tasks:
 vscode:
   extensions:
     - muhammad-sammy.csharp
-    - sdras.night-owl
+    - dracula-theme.theme-dracula
     - humao.rest-client
     - ms-azuretools.vscode-docker
     - ckolkman.vscode-postgres
